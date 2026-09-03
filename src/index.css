@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #060606;
+  --color-card: #111111;
+  --color-card-hover: #161616;
+  --color-border: #1E1E1E;
+  --color-border-focus: #333333;
+  --color-text: #E8E4DD;
+  --color-text-muted: #8A857E;
+  --color-gold: #C9A86A;
+  --color-gold-dim: #A68B52;
+  --color-loss: #8B2E2E;
+  --color-gain: #2E5A4C;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #060606;
+  color: #E8E4DD;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-count {
+  animation: countUp 0.5s ease-out forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: #1E1E1E;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #C9A86A;
+  cursor: pointer;
+  border: 2px solid #060606;
+  box-shadow: 0 0 10px rgba(201, 168, 106, 0.25);
+  transition: box-shadow 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  box-shadow: 0 0 16px rgba(201, 168, 106, 0.4);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #C9A86A;
+  cursor: pointer;
+  border: 2px solid #060606;
+  box-shadow: 0 0 10px rgba(201, 168, 106, 0.25);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #8A857E;
+  opacity: 0.5;
+}
