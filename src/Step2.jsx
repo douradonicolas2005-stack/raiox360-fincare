@@ -109,7 +109,7 @@ export default function Step2({ data, onChange, onNext }) {
           Quase lá. Precisamos dos seus dados
         </h1>
         <p className="text-sm text-[#E8E4DD]/40 max-w-md mx-auto leading-relaxed">
-          Seu Raio-X 360° será gerado de forma <span className="text-[#C9A86A]/80">100% confidencial</span>. Precisamos apenas para enviar o relatório e agendar sua análise.
+          Seu Raio-X Patrimonial sera gerado de forma <span className="text-[#C9A86A]/80">100% confidencial</span>. Precisamos apenas para enviar o relatório e agendar sua análise.
         </p>
       </div>
 
@@ -214,7 +214,7 @@ export default function Step2({ data, onChange, onNext }) {
                 </div>
               </div>
               <span className="text-xs text-[#E8E4DD]/50 leading-relaxed">
-                <span className="text-[#E8E4DD]/70 font-medium">Obrigatorio:</span> Autorizo o contato da <span className="text-[#C9A86A]/70">Fincare</span> via WhatsApp e/ou e-mail para envio do Raio-X 360° e agendamento de analise patrimonial confidencial.
+                <span className="text-[#E8E4DD]/70 font-medium">Obrigatorio:</span> Autorizo o contato da <span className="text-[#C9A86A]/70">Fincare</span> via WhatsApp e/ou e-mail para envio do Raio-X Patrimonial e agendamento de analise patrimonial confidencial.
               </span>
             </label>
             {errors.consentContato && touched.consentContato && (
@@ -299,7 +299,7 @@ export default function Step2({ data, onChange, onNext }) {
               : 'bg-[#1E1E1E] text-[#E8E4DD]/25 cursor-not-allowed'
           }`}
         >
-          Ver meu Raio-X 360°
+          Ver meu Raio-X Patrimonial
           <svg className="inline-block ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

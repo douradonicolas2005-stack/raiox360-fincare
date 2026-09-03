@@ -30,7 +30,7 @@ export default function Step1({ data, onChange, onNext }) {
           Fincare &mdash; Engenharia Patrimonial
         </p>
         <h1 className="text-2xl md:text-[30px] font-bold text-[#E8E4DD] leading-tight mb-3">
-          Raio-X 360° do seu Patrimonio
+          Raio-X Patrimonial do seu Patrimonio
         </h1>
         <p className="text-sm text-[#E8E4DD]/35 max-w-md mx-auto">
           Descubra em 3 minutos quanto esta vazando em imposto, inventario e juros

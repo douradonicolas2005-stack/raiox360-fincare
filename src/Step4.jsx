@@ -173,7 +173,7 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
           ) : (
             <>
               <DownloadIcon />
-              Baixar Raio-X 360° completo em PDF
+              Baixar Raio-X Patrimonial completo em PDF
             </>
           )}
         </button>

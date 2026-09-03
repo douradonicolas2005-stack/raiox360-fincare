@@ -49,7 +49,7 @@ export function gerarPDF(resultados, formData, leadData) {
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
   doc.setTextColor(...gold);
-  doc.text('RAIO-X 360\u00b0', pageW / 2, y + 2, { align: 'center' });
+  doc.text('RAIO-X PATRIMONIAL', pageW / 2, y + 2, { align: 'center' });
 
   y += 14;
   drawGoldLine(y);
@@ -218,6 +218,6 @@ export function gerarPDF(resultados, formData, leadData) {
   doc.text('Simulacao educativa com base em medias de mercado. Nao constitui recomendacao juridica ou tributaria. Valide com advogado e contador.', pageW / 2, pageH - 16, { align: 'center' });
   doc.text('Fincare Servicos Financeiros Ltda. | Dados protegidos conforme LGPD (Lei 13.709/2018)', pageW / 2, pageH - 12, { align: 'center' });
 
-  const fileName = `Fincare_RaioX360_${leadData.nome?.replace(/\s+/g, '_') || 'relatorio'}_${dataGeracao.replace(/\//g, '-')}.pdf`;
+  const fileName = `Fincare_RaioXPatrimonial_${leadData.nome?.replace(/\s+/g, '_') || 'relatorio'}_${dataGeracao.replace(/\//g, '-')}.pdf`;
   doc.save(fileName);
 }

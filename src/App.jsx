@@ -21,7 +21,7 @@ const INITIAL_LEAD = {
   consentMarketing: false,
 };
 
-const STORAGE_KEY = 'fincare_raiox360';
+const STORAGE_KEY = 'fincare_raioxpatrimonial';
 
 function loadSaved() {
   try {
