@@ -71,18 +71,18 @@ export default function App() {
   const steps = ['Diagnostico', 'Contato', 'Resultado', 'Mapa'];
 
   return (
-    <div className="min-h-screen bg-[#0B1120]">
+    <div className="min-h-screen bg-[#00A651]">
       {/* Progress Bar */}
-      <div className="sticky top-0 z-50 bg-[#0B1120]/95 backdrop-blur-md border-b border-[#1C2840]">
+      <div className="sticky top-0 z-50 bg-[#00A651]/95 backdrop-blur-md border-b border-white/15">
         <div className="max-w-2xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">
-              <div className="w-1.5 h-1.5 rounded-full bg-[#00A651]" />
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#00A651]/60 font-medium">
+              <div className="w-1.5 h-1.5 rounded-full bg-white" />
+              <span className="text-[10px] tracking-[0.2em] uppercase text-white/80 font-semibold">
                 Fincare
               </span>
             </div>
-            <span className="text-[10px] text-[#E2E8F0]/25">
+            <span className="text-[10px] text-white/40">
               Etapa {step} de 4
             </span>
           </div>
@@ -91,7 +91,7 @@ export default function App() {
               <div key={s} className="flex-1">
                 <div
                   className={`h-[3px] rounded-full transition-all duration-700 ease-out ${
-                    s <= step ? 'bg-[#00A651]' : 'bg-[#1C2840]'
+                    s <= step ? 'bg-white' : 'bg-white/20'
                   }`}
                 />
               </div>
@@ -102,7 +102,7 @@ export default function App() {
               <span
                 key={i}
                 className={`text-[8px] tracking-[0.15em] uppercase transition-colors duration-500 ${
-                  i + 1 <= step ? 'text-[#00A651]/60' : 'text-[#E2E8F0]/15'
+                  i + 1 <= step ? 'text-white/70' : 'text-white/25'
                 }`}
               >
                 {label}
@@ -134,12 +134,12 @@ export default function App() {
       </main>
 
       {/* Disclaimer */}
-      <footer className="border-t border-[#1C2840] mt-12">
+      <footer className="border-t border-white/10 mt-12">
         <div className="max-w-2xl mx-auto px-4 py-4 space-y-1">
-          <p className="text-[9px] text-[#E2E8F0]/20 text-center leading-relaxed">
+          <p className="text-[9px] text-white/30 text-center leading-relaxed">
             Simulacao educativa com base em medias de mercado. Nao constitui recomendacao juridica ou tributaria. Valide com advogado e contador.
           </p>
-          <p className="text-[9px] text-[#E2E8F0]/12 text-center">
+          <p className="text-[9px] text-white/20 text-center">
             Fincare Servicos Financeiros Ltda. | CNPJ 00.000.000/0001-00
           </p>
         </div>

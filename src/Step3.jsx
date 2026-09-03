@@ -48,21 +48,21 @@ function VazamentoCard({ titulo, valorPerda, valorEconomia, descricao, delay = 0
 
   return (
     <div
-      className="animate-fade-in-up opacity-0 bg-[#131D30] border border-[#1C2840] rounded-xl p-5 md:p-6"
+      className="animate-fade-in-up opacity-0 bg-white rounded-2xl p-5 md:p-6 shadow-[0_2px_16px_rgba(0,0,0,0.08)]"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
-      <h3 className="text-sm font-semibold text-[#C9A86A] mb-4 tracking-wide">{titulo}</h3>
-      <p className="text-xs text-[#E2E8F0]/40 mb-5 leading-relaxed">{descricao}</p>
+      <h3 className="text-sm font-semibold text-[#B8860B] mb-4 tracking-wide">{titulo}</h3>
+      <p className="text-xs text-[#1A2E23]/45 mb-5 leading-relaxed">{descricao}</p>
 
       <div className="space-y-3">
         <div>
           <div className="flex justify-between mb-1">
-            <span className="text-[11px] text-[#E2E8F0]/30">Vazamento atual</span>
+            <span className="text-[11px] text-[#1A2E23]/35">Vazamento atual</span>
             <span className="text-sm font-bold text-[#DC3545]">
               <AnimatedNumber value={valorPerda} prefix="R$ " delay={delay + 300} />
             </span>
           </div>
-          <div className="h-1.5 bg-[#0B1120] rounded-full overflow-hidden">
+          <div className="h-1.5 bg-[#FEE8EA] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#DC3545]/70 rounded-full transition-all duration-1000 ease-out"
               style={{ width: barsReady ? `${barPerda}%` : '0%', transitionDelay: '200ms' }}
@@ -72,12 +72,12 @@ function VazamentoCard({ titulo, valorPerda, valorEconomia, descricao, delay = 0
 
         <div>
           <div className="flex justify-between mb-1">
-            <span className="text-[11px] text-[#E2E8F0]/30">Otimizado</span>
+            <span className="text-[11px] text-[#1A2E23]/35">Otimizado</span>
             <span className="text-sm font-bold text-[#00A651]">
               <AnimatedNumber value={valorEconomia} prefix="R$ " delay={delay + 600} />
             </span>
           </div>
-          <div className="h-1.5 bg-[#0B1120] rounded-full overflow-hidden">
+          <div className="h-1.5 bg-[#E8F5EC] rounded-full overflow-hidden">
             <div
               className="h-full bg-[#00A651]/70 rounded-full transition-all duration-1000 ease-out"
               style={{ width: barsReady ? `${barEconomia}%` : '0%', transitionDelay: '400ms' }}
@@ -92,24 +92,22 @@ function VazamentoCard({ titulo, valorPerda, valorEconomia, descricao, delay = 0
 export default function Step3({ resultados, onNext }) {
   return (
     <div className="animate-fade-in-up">
-      {/* Header */}
       <div className="text-center mb-8">
-        <p className="text-[10px] tracking-[0.25em] uppercase text-[#DC3545]/80 mb-3 font-medium animate-pulse-subtle">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-white/60 mb-3 font-semibold animate-pulse-subtle">
           Alerta de vazamento patrimonial
         </p>
-        <h1 className="text-xl md:text-[26px] font-bold text-[#E2E8F0] leading-tight mb-2">
+        <h1 className="text-xl md:text-[26px] font-bold text-white leading-tight mb-2">
           Encontramos{' '}
-          <span className="text-[#DC3545]">
+          <span className="text-white">
             <AnimatedNumber value={resultados.total.economia5Anos} prefix="R$ " />
           </span>{' '}
           de vazamento nos proximos 5 anos
         </h1>
-        <p className="text-xs text-[#E2E8F0]/30 mt-2">
+        <p className="text-xs text-white/50 mt-2">
           Analise baseada no perfil informado &mdash; Fincare Engenharia Patrimonial
         </p>
       </div>
 
-      {/* Vazamentos */}
       <div className="space-y-4">
         <VazamentoCard
           titulo="VAZAMENTO 1 \u2014 Imposto Invisivel"
@@ -138,31 +136,30 @@ export default function Step3({ resultados, onNext }) {
         )}
       </div>
 
-      {/* Card Grande Verde */}
+      {/* Card Grande - escuro para contraste */}
       <div
-        className="animate-fade-in-up opacity-0 mt-8 rounded-xl p-6 md:p-8 text-center border border-[#00A651]/25 bg-gradient-to-b from-[#00A651]/8 via-[#00A651]/3 to-transparent"
+        className="animate-fade-in-up opacity-0 mt-8 rounded-2xl p-6 md:p-8 text-center bg-[#1A2E23] shadow-[0_4px_24px_rgba(0,0,0,0.15)]"
         style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}
       >
-        <p className="text-[10px] tracking-[0.2em] uppercase text-[#00A651]/50 mb-2 font-semibold">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-white/40 mb-2 font-semibold">
           Potencial total de economia em 5 anos
         </p>
-        <p className="text-3xl md:text-4xl font-bold text-[#00A651] mb-4">
+        <p className="text-3xl md:text-4xl font-bold text-[#C9A86A] mb-4">
           <AnimatedNumber value={resultados.total.economia5Anos} prefix="R$ " delay={1400} />
         </p>
-        <div className="h-px bg-[#00A651]/15 my-3" />
-        <p className="text-sm text-[#E2E8F0]/40">
+        <div className="h-px bg-white/10 my-3" />
+        <p className="text-sm text-white/50">
           Seu tempo para aposentadoria: de{' '}
-          <span className="font-bold text-[#E2E8F0]/70">{resultados.total.anosAtuais} anos</span>{' '}
+          <span className="font-bold text-white/80">{resultados.total.anosAtuais} anos</span>{' '}
           para{' '}
-          <span className="font-bold text-[#00A651]/80">{resultados.total.anosReduzido} anos</span>
+          <span className="font-bold text-[#C9A86A]">{resultados.total.anosReduzido} anos</span>
         </p>
       </div>
 
-      {/* Botao */}
       <div className="mt-8">
         <button
           onClick={onNext}
-          className="w-full py-4 rounded-xl text-base font-semibold tracking-wide bg-[#131D30] border border-[#1C2840] text-[#00A651] hover:bg-[#182438] hover:border-[#00A651]/20 transition-all duration-300"
+          className="w-full py-4 rounded-2xl text-base font-semibold tracking-wide bg-white text-[#00A651] hover:bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300"
         >
           Ver meu Mapa de Engenharia
           <svg className="inline-block ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
