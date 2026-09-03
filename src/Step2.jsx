@@ -79,7 +79,7 @@ export default function Step2({ data, onChange, onNext }) {
     onNext();
   };
 
-  const inputBase = "w-full px-4 py-3 bg-[#122E25] border rounded-xl text-sm text-[#E2E8F0] focus:outline-none transition-colors";
+  const inputBase = "w-full px-4 py-3 bg-[#21262d] border rounded-xl text-sm text-[#f0f6fc] focus:outline-none transition-colors";
 
   return (
     <div className="animate-fade-in-up">
@@ -87,24 +87,24 @@ export default function Step2({ data, onChange, onNext }) {
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
           Fincare &mdash; Engenharia Patrimonial
         </p>
-        <h1 className="text-2xl md:text-[28px] font-bold text-[#E2E8F0] leading-tight mb-3">
+        <h1 className="text-2xl md:text-[28px] font-bold text-[#f0f6fc] leading-tight mb-3">
           Sua heranca. Seu proximo passo.
         </h1>
-        <p className="text-sm text-[#8AA59A] max-w-md mx-auto leading-relaxed">
+        <p className="text-sm text-[#8b949e] max-w-md mx-auto leading-relaxed">
           Precisamos dos seus dados para montar o seu Raio-X completo e agendar sua analise patrimonial confidencial.
         </p>
       </div>
 
       <div className="space-y-5">
         {/* Dados Pessoais */}
-        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+        <div className="bg-[#161b22] rounded-2xl p-5 md:p-6 border border-[#30363d] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
           <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[#C9A86A] mb-5">
             Dados pessoais
           </h3>
 
           <div className="space-y-4">
             <div>
-              <label className="text-xs text-[#8AA59A] mb-1.5 block">Nome completo</label>
+              <label className="text-xs text-[#8b949e] mb-1.5 block">Nome completo</label>
               <input
                 type="text"
                 placeholder="Seu nome e sobrenome"
@@ -113,17 +113,17 @@ export default function Step2({ data, onChange, onNext }) {
                 onBlur={() => handleBlur('nome')}
                 className={`${inputBase} ${
                   errors.nome && touched.nome
-                    ? 'border-[#E05C6E]/50 focus:border-[#E05C6E]'
-                    : 'border-[#1F4A3A] focus:border-[#C9A86A]'
+                    ? 'border-[#da3633]/50 focus:border-[#da3633]'
+                    : 'border-[#30363d] focus:border-[#58a6ff]'
                 }`}
               />
               {errors.nome && touched.nome && (
-                <p className="text-[11px] text-[#E05C6E]/80 mt-1">{errors.nome}</p>
+                <p className="text-[11px] text-[#da3633]/80 mt-1">{errors.nome}</p>
               )}
             </div>
 
             <div>
-              <label className="text-xs text-[#8AA59A] mb-1.5 block">E-mail</label>
+              <label className="text-xs text-[#8b949e] mb-1.5 block">E-mail</label>
               <input
                 type="email"
                 placeholder="seu@email.com"
@@ -132,17 +132,17 @@ export default function Step2({ data, onChange, onNext }) {
                 onBlur={() => handleBlur('email')}
                 className={`${inputBase} ${
                   errors.email && touched.email
-                    ? 'border-[#E05C6E]/50 focus:border-[#E05C6E]'
-                    : 'border-[#1F4A3A] focus:border-[#C9A86A]'
+                    ? 'border-[#da3633]/50 focus:border-[#da3633]'
+                    : 'border-[#30363d] focus:border-[#58a6ff]'
                 }`}
               />
               {errors.email && touched.email && (
-                <p className="text-[11px] text-[#E05C6E]/80 mt-1">{errors.email}</p>
+                <p className="text-[11px] text-[#da3633]/80 mt-1">{errors.email}</p>
               )}
             </div>
 
             <div>
-              <label className="text-xs text-[#8AA59A] mb-1.5 block">WhatsApp</label>
+              <label className="text-xs text-[#8b949e] mb-1.5 block">WhatsApp</label>
               <input
                 type="tel"
                 placeholder="(11) 99999-0000 ou +55..."
@@ -151,14 +151,14 @@ export default function Step2({ data, onChange, onNext }) {
                 onBlur={() => handleBlur('whatsapp')}
                 className={`${inputBase} ${
                   errors.whatsapp && touched.whatsapp
-                    ? 'border-[#E05C6E]/50 focus:border-[#E05C6E]'
-                    : 'border-[#1F4A3A] focus:border-[#C9A86A]'
+                    ? 'border-[#da3633]/50 focus:border-[#da3633]'
+                    : 'border-[#30363d] focus:border-[#58a6ff]'
                 }`}
               />
               {errors.whatsapp && touched.whatsapp && (
-                <p className="text-[11px] text-[#E05C6E]/80 mt-1">{errors.whatsapp}</p>
+                <p className="text-[11px] text-[#da3633]/80 mt-1">{errors.whatsapp}</p>
               )}
-              <p className="text-[10px] text-[#5E7B6E] mt-1">
+              <p className="text-[10px] text-[#6e7681] mt-1">
                 Aceitamos: (DDD) 9XXXX-XXXX, +55(DDD)9XXXX-XXXX, formatos internacionais
               </p>
             </div>
@@ -166,7 +166,7 @@ export default function Step2({ data, onChange, onNext }) {
         </div>
 
         {/* Permissoes */}
-        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+        <div className="bg-[#161b22] rounded-2xl p-5 md:p-6 border border-[#30363d] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
           <h3 className="text-xs font-semibold tracking-[0.15em] uppercase text-[#C9A86A] mb-5">
             Permissoes de contato
           </h3>
@@ -184,8 +184,8 @@ export default function Step2({ data, onChange, onNext }) {
                   data.consentContato
                     ? 'bg-[#C9A86A] border-[#C9A86A]'
                     : errors.consentContato
-                      ? 'border-[#E05C6E]/50 bg-[#122E25]'
-                      : 'border-[#3A6450] bg-[#122E25] group-hover:border-[#C9A86A]/40'
+                      ? 'border-[#da3633]/50 bg-[#21262d]'
+                      : 'border-[#3A6450] bg-[#21262d] group-hover:border-[#C9A86A]/40'
                 }`}>
                   {data.consentContato && (
                     <svg className="w-3 h-3 text-[#0C2017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
@@ -194,12 +194,12 @@ export default function Step2({ data, onChange, onNext }) {
                   )}
                 </div>
               </div>
-              <span className="text-xs text-[#8AA59A] leading-relaxed">
-                <span className="text-[#E2E8F0] font-medium">Obrigatorio:</span> Autorizo o contato da <span className="text-[#C9A86A] font-medium">Fincare</span> via WhatsApp e/ou e-mail para envio do Raio-X Patrimonial e agendamento de analise patrimonial confidencial.
+              <span className="text-xs text-[#8b949e] leading-relaxed">
+                <span className="text-[#f0f6fc] font-medium">Obrigatorio:</span> Autorizo o contato da <span className="text-[#C9A86A] font-medium">Fincare</span> via WhatsApp e/ou e-mail para envio do Raio-X Patrimonial e agendamento de analise patrimonial confidencial.
               </span>
             </label>
             {errors.consentContato && touched.consentContato && (
-              <p className="text-[11px] text-[#E05C6E]/80 -mt-2 ml-8">{errors.consentContato}</p>
+              <p className="text-[11px] text-[#da3633]/80 -mt-2 ml-8">{errors.consentContato}</p>
             )}
 
             <label className="flex items-start gap-3 cursor-pointer group">
@@ -214,8 +214,8 @@ export default function Step2({ data, onChange, onNext }) {
                   data.consentPrivacidade
                     ? 'bg-[#C9A86A] border-[#C9A86A]'
                     : errors.consentPrivacidade
-                      ? 'border-[#E05C6E]/50 bg-[#122E25]'
-                      : 'border-[#3A6450] bg-[#122E25] group-hover:border-[#C9A86A]/40'
+                      ? 'border-[#da3633]/50 bg-[#21262d]'
+                      : 'border-[#3A6450] bg-[#21262d] group-hover:border-[#C9A86A]/40'
                 }`}>
                   {data.consentPrivacidade && (
                     <svg className="w-3 h-3 text-[#0C2017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
@@ -224,13 +224,13 @@ export default function Step2({ data, onChange, onNext }) {
                   )}
                 </div>
               </div>
-              <span className="text-xs text-[#8AA59A] leading-relaxed">
-                <span className="text-[#E2E8F0] font-medium">Obrigatorio:</span> Li e concordo com a{' '}
-                <span className="text-[#C9A86A] underline underline-offset-2">Politica de Privacidade</span> da Fincare. Meus dados serao tratados conforme a LGPD (Lei 13.709/2018) e utilizados exclusivamente para a prestacao dos servicos de engenharia patrimonial.
+              <span className="text-xs text-[#8b949e] leading-relaxed">
+                <span className="text-[#f0f6fc] font-medium">Obrigatorio:</span> Li e concordo com a{' '}
+                <span className="text-[#58a6ff] underline underline-offset-2">Politica de Privacidade</span> da Fincare. Meus dados serao tratados conforme a LGPD (Lei 13.709/2018) e utilizados exclusivamente para a prestacao dos servicos de engenharia patrimonial.
               </span>
             </label>
             {errors.consentPrivacidade && touched.consentPrivacidade && (
-              <p className="text-[11px] text-[#E05C6E]/80 -mt-2 ml-8">{errors.consentPrivacidade}</p>
+              <p className="text-[11px] text-[#da3633]/80 -mt-2 ml-8">{errors.consentPrivacidade}</p>
             )}
 
             <label className="flex items-start gap-3 cursor-pointer group">
@@ -244,7 +244,7 @@ export default function Step2({ data, onChange, onNext }) {
                 <div className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-all ${
                   data.consentMarketing
                     ? 'bg-[#C9A86A] border-[#C9A86A]'
-                    : 'border-[#3A6450] bg-[#122E25] group-hover:border-[#C9A86A]/40'
+                    : 'border-[#3A6450] bg-[#21262d] group-hover:border-[#C9A86A]/40'
                 }`}>
                   {data.consentMarketing && (
                     <svg className="w-3 h-3 text-[#0C2017]" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
@@ -253,14 +253,14 @@ export default function Step2({ data, onChange, onNext }) {
                   )}
                 </div>
               </div>
-              <span className="text-xs text-[#8AA59A] leading-relaxed">
-                <span className="text-[#5E7B6E]">Opcional:</span> Desejo receber conteudos exclusivos da Fincare sobre investimentos, planejamento patrimonial e oportunidades de mercado.
+              <span className="text-xs text-[#8b949e] leading-relaxed">
+                <span className="text-[#6e7681]">Opcional:</span> Desejo receber conteudos exclusivos da Fincare sobre investimentos, planejamento patrimonial e oportunidades de mercado.
               </span>
             </label>
           </div>
 
-          <div className="mt-5 pt-4 border-t border-[#1F4A3A]">
-            <p className="text-[10px] text-[#5E7B6E] leading-relaxed">
+          <div className="mt-5 pt-4 border-t border-[#30363d]">
+            <p className="text-[10px] text-[#6e7681] leading-relaxed">
               Em conformidade com a LGPD (Lei 13.709/2018), seus dados pessoais sao de responsabilidade da Fincare Servicos Financeiros Ltda. e serao utilizados exclusivamente para a finalidade declarada. Voce pode solicitar exclusao, correcao ou acesso aos seus dados a qualquer momento pelo e-mail privacidade@fincare.com.br.
             </p>
           </div>
@@ -273,7 +273,7 @@ export default function Step2({ data, onChange, onNext }) {
           className={`w-full py-4 rounded-2xl text-base font-semibold tracking-wide transition-all duration-300 ${
             isValid
               ? 'bg-[#C9A86A] text-[#0C2017] hover:bg-[#D9BB82] shadow-[0_4px_20px_rgba(201,168,106,0.25)]'
-              : 'bg-[#2A5445]/50 text-[#5E7B6E] cursor-not-allowed'
+              : 'bg-[#30363d]/60 text-[#6e7681] cursor-not-allowed'
           }`}
         >
           Ver meu Raio-X Patrimonial
@@ -282,7 +282,7 @@ export default function Step2({ data, onChange, onNext }) {
           </svg>
         </button>
         {!isValid && (
-          <p className="text-[10px] text-center text-[#5E7B6E] mt-2">
+          <p className="text-[10px] text-center text-[#6e7681] mt-2">
             Preencha todos os campos obrigatorios e aceite os termos
           </p>
         )}

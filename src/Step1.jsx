@@ -6,7 +6,7 @@ function IconPatrimonio({ className }) {
   return (
     <svg className={className} viewBox="0 0 96 96" fill="none">
       {/* base ground */}
-      <polygon points="48,70 20,56 48,42 76,56" fill="#1F4A3A" />
+      <polygon points="48,70 20,56 48,42 76,56" fill="#30363d" />
       {/* moedas empilhadas */}
       <g>
         <ellipse cx="48" cy="52" rx="16" ry="8" fill="#C9A86A" />
@@ -26,7 +26,7 @@ function IconDivisao({ className }) {
   return (
     <svg className={className} viewBox="0 0 96 96" fill="none">
       {/* terreno */}
-      <polygon points="48,66 16,51 48,36 80,51" fill="#1F4A3A" />
+      <polygon points="48,66 16,51 48,36 80,51" fill="#30363d" />
       {/* predio esquerda (imovel) */}
       <rect x="30" y="30" width="16" height="24" fill="#C9A86A" />
       <rect x="33" y="24" width="10" height="8" fill="#C9A86A" />
@@ -35,7 +35,7 @@ function IconDivisao({ className }) {
       <rect x="54" y="38" width="14" height="16" fill="#00A651" />
       <path d="M58 50 l4 -6 4 4 4 -5" stroke="#0C2017" strokeWidth="2" fill="none" />
       {/* separador */}
-      <path d="M48 24 v44" stroke="#5E7B6E" strokeWidth="1" strokeDasharray="3,3" />
+      <path d="M48 24 v44" stroke="#30363d" strokeWidth="1" strokeDasharray="3,3" />
     </svg>
   );
 }
@@ -44,7 +44,7 @@ function IconEstrutura({ className }) {
   return (
     <svg className={className} viewBox="0 0 96 96" fill="none">
       {/* terreno */}
-      <polygon points="48,70 20,56 48,42 76,56" fill="#1F4A3A" />
+      <polygon points="48,70 20,56 48,42 76,56" fill="#30363d" />
       {/* holding - caixa com tampa */}
       <rect x="32" y="34" width="32" height="22" fill="#C9A86A" />
       <polygon points="30,34 48,26 66,34 48,42" fill="#E0C58E" />
@@ -60,10 +60,10 @@ function IconDor({ className }) {
   return (
     <svg className={className} viewBox="0 0 96 96" fill="none">
       {/* terreno */}
-      <polygon points="48,72 18,57 48,42 78,57" fill="#1F4A3A" />
+      <polygon points="48,72 18,57 48,42 78,57" fill="#30363d" />
       {/* coracao/alvo */}
-      <circle cx="48" cy="46" r="16" fill="#E05C6E" opacity="0.35" />
-      <circle cx="48" cy="46" r="10" fill="#E05C6E" />
+      <circle cx="48" cy="46" r="16" fill="#da3633" opacity="0.35" />
+      <circle cx="48" cy="46" r="10" fill="#da3633" />
       <circle cx="48" cy="46" r="4" fill="#0C2017" />
       {/* raios de foco */}
       <path d="M48 24 v-6 M48 68 v6 M28 46 h-6 M68 46 h6" stroke="#C9A86A" strokeWidth="3" strokeLinecap="round" />
@@ -160,14 +160,14 @@ export default function Step1({ data, onChange, onNext }) {
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
           Fincare &mdash; Engenharia Patrimonial
         </p>
-        <h1 className="text-2xl md:text-[30px] font-bold text-[#E2E8F0] leading-tight mb-3">
+        <h1 className="text-2xl md:text-[30px] font-bold text-[#f0f6fc] leading-tight mb-3">
           Pergunta {subStep + 1} de {SUB_STEPS.length}
         </h1>
         <span className="inline-flex items-center gap-1.5 text-[10px] tracking-[0.15em] uppercase text-[#C9A86A]/80 bg-[#C9A86A]/10 border border-[#C9A86A]/30 rounded-full px-3 py-1 font-semibold">
           <span className="w-1.5 h-1.5 rounded-full bg-[#C9A86A]" />
           {step.badgetxt}
         </span>
-        <p className="text-[10px] text-[#5E7B6E] mt-3 tracking-wide">
+        <p className="text-[10px] text-[#6e7681] mt-3 tracking-wide">
           Etapa 1 &mdash; Organize os bens. Entenda os custos. Planeje sua renda.
         </p>
       </div>
@@ -178,23 +178,23 @@ export default function Step1({ data, onChange, onNext }) {
           <div
             key={s.id}
             className={`flex-1 h-1 rounded-full transition-all duration-500 ${
-              i < subStep ? 'bg-[#C9A86A]' : i === subStep ? 'bg-[#C9A86A]/60' : 'bg-[#1F4A3A]'
+              i < subStep ? 'bg-[#C9A86A]' : i === subStep ? 'bg-[#C9A86A]/60' : 'bg-[#30363d]'
             }`}
           />
         ))}
       </div>
 
       {/* Card da pergunta com icone ao lado */}
-      <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+      <div className="bg-[#161b22] rounded-2xl p-5 md:p-6 border border-[#30363d] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
         <div className="flex items-start gap-4 mb-5">
-          <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-2xl bg-[#122E25] border border-[#1F4A3A] flex items-center justify-center">
+          <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 rounded-2xl bg-[#21262d] border border-[#30363d] flex items-center justify-center">
             <Icon className="w-full h-full" />
           </div>
           <div>
-            <h2 className="text-lg md:text-xl font-bold text-[#E2E8F0] leading-snug mb-1">
+            <h2 className="text-lg md:text-xl font-bold text-[#f0f6fc] leading-snug mb-1">
               {step.titulo}
             </h2>
-            <p className="text-xs text-[#8AA59A] leading-relaxed">{step.descricao}</p>
+            <p className="text-xs text-[#8b949e] leading-relaxed">{step.descricao}</p>
           </div>
         </div>
 
@@ -202,8 +202,8 @@ export default function Step1({ data, onChange, onNext }) {
         {subStep === 0 && (
           <div className="ml-0 md:ml-28">
             <div className="flex justify-between items-center mb-4">
-              <label className="text-sm font-medium text-[#8AA59A]">Patrimonio total estimado</label>
-              <span className="text-lg font-bold text-[#C9A86A]">{formatCurrency(data.patrimonio)}</span>
+              <label className="text-sm font-medium text-[#8b949e]">Patrimonio total estimado</label>
+              <span className="text-lg font-bold font-mono text-[#C9A86A]">{formatCurrency(data.patrimonio)}</span>
             </div>
             <input
               type="range"
@@ -215,8 +215,8 @@ export default function Step1({ data, onChange, onNext }) {
               className="w-full"
             />
             <div className="flex justify-between mt-2">
-              <span className="text-[10px] text-[#5E7B6E]">R$ 500k</span>
-              <span className="text-[10px] text-[#5E7B6E]">R$ 10M+</span>
+              <span className="text-[10px] text-[#6e7681]">R$ 500k</span>
+              <span className="text-[10px] text-[#6e7681]">R$ 10M+</span>
             </div>
           </div>
         )}
@@ -224,13 +224,13 @@ export default function Step1({ data, onChange, onNext }) {
         {subStep === 1 && (
           <div className="ml-0 md:ml-28">
             <div className="flex justify-between items-center mb-3">
-              <label className="text-sm font-medium text-[#8AA59A]">Divisao atual</label>
-              <span className={`text-sm font-bold ${totalDivisao === 100 ? 'text-[#C9A86A]' : 'text-[#E05C6E]'}`}>
+              <label className="text-sm font-medium text-[#8b949e]">Divisao atual</label>
+              <span className={`text-sm font-bold ${totalDivisao === 100 ? 'text-[#C9A86A]' : 'text-[#da3633]'}`}>
                 {totalDivisao}%
               </span>
             </div>
             {totalDivisao !== 100 && (
-              <p className="text-[11px] text-[#E05C6E]/70 mb-3">Os sliders devem somar 100%</p>
+              <p className="text-[11px] text-[#da3633]/70 mb-3">Os sliders devem somar 100%</p>
             )}
             <div className="space-y-5">
               {[
@@ -241,8 +241,8 @@ export default function Step1({ data, onChange, onNext }) {
               ].map(({ key, label }) => (
                 <div key={key}>
                   <div className="flex justify-between mb-2">
-                    <span className="text-xs text-[#8AA59A]">{label}</span>
-                    <span className="text-sm font-semibold text-[#C9A86A]">{data.divisao[key]}%</span>
+                    <span className="text-xs text-[#8b949e]">{label}</span>
+                    <span className="text-sm font-semibold font-mono text-[#C9A86A]">{data.divisao[key]}%</span>
                   </div>
                   <input
                     type="range"
@@ -256,7 +256,7 @@ export default function Step1({ data, onChange, onNext }) {
                 </div>
               ))}
             </div>
-            <div className="flex h-1.5 rounded-full overflow-hidden mt-4 bg-[#1F4A3A]">
+            <div className="flex h-1.5 rounded-full overflow-hidden mt-4 bg-[#30363d]">
               <div className="bg-[#C9A86A]/70 transition-all duration-300" style={{ width: `${data.divisao.imoveis}%` }} />
               <div className="bg-[#00A651]/60 transition-all duration-300" style={{ width: `${data.divisao.banco}%` }} />
               <div className="bg-[#C9A86A]/40 transition-all duration-300" style={{ width: `${data.divisao.investimentos}%` }} />
@@ -274,7 +274,7 @@ export default function Step1({ data, onChange, onNext }) {
                 className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${
                   data.estrutura === opt
                     ? 'border-[#C9A86A] bg-[#C9A86A]/10 text-[#C9A86A] font-medium'
-                    : 'border-[#1F4A3A] bg-[#122E25] text-[#8AA59A] hover:border-[#C9A86A]/30 hover:bg-[#16382D]'
+                    : 'border-[#30363d] bg-[#21262d] text-[#8b949e] hover:border-[#C9A86A]/30 hover:bg-[#161b22]'
                 }`}
               >
                 {opt}
@@ -297,7 +297,7 @@ export default function Step1({ data, onChange, onNext }) {
                 className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${
                   data.maiorDor === opt
                     ? 'border-[#C9A86A] bg-[#C9A86A]/10 text-[#C9A86A] font-medium'
-                    : 'border-[#1F4A3A] bg-[#122E25] text-[#8AA59A] hover:border-[#C9A86A]/30 hover:bg-[#16382D]'
+                    : 'border-[#30363d] bg-[#21262d] text-[#8b949e] hover:border-[#C9A86A]/30 hover:bg-[#161b22]'
                 }`}
               >
                 {opt}
@@ -312,7 +312,7 @@ export default function Step1({ data, onChange, onNext }) {
         {subStep > 0 ? (
           <button
             onClick={handleBack}
-            className="px-5 py-4 rounded-2xl text-sm font-semibold text-[#8AA59A] bg-[#16382D] border border-[#1F4A3A] hover:bg-[#1B4235] transition-all duration-300"
+            className="px-5 py-4 rounded-2xl text-sm font-semibold text-[#8b949e] bg-[#161b22] border border-[#30363d] hover:bg-[#21262d] transition-all duration-300"
           >
             Voltar
           </button>
@@ -323,7 +323,7 @@ export default function Step1({ data, onChange, onNext }) {
           className={`flex-1 py-4 rounded-2xl text-base font-semibold tracking-wide transition-all duration-300 ${
             canNext
               ? 'bg-[#C9A86A] text-[#0C2017] hover:bg-[#D9BB82] shadow-[0_4px_20px_rgba(201,168,106,0.25)]'
-              : 'bg-[#2A5445]/50 text-[#5E7B6E] cursor-not-allowed'
+              : 'bg-[#30363d]/60 text-[#6e7681] cursor-not-allowed'
           }`}
         >
           {isLast ? 'Gerar meu Raio-X' : 'Proxima pergunta'}
@@ -334,7 +334,7 @@ export default function Step1({ data, onChange, onNext }) {
       </div>
 
       {!canNext && subStep === 1 && totalDivisao !== 100 && (
-        <p className="text-[10px] text-center text-[#5E7B6E] mt-2">
+        <p className="text-[10px] text-center text-[#6e7681] mt-2">
           Ajuste os sliders para somar 100%
         </p>
       )}

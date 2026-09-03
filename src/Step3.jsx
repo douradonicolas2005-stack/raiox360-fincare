@@ -48,23 +48,23 @@ function VazamentoCard({ titulo, valorPerda, valorEconomia, descricao, delay = 0
 
   return (
     <div
-      className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]"
+      className="animate-fade-in-up opacity-0 bg-[#161b22] rounded-2xl p-5 md:p-6 border border-[#30363d] shadow-[0_2px_16px_rgba(0,0,0,0.3)]"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
       <h3 className="text-sm font-semibold text-[#C9A86A] mb-4 tracking-wide">{titulo}</h3>
-      <p className="text-xs text-[#8AA59A] mb-5 leading-relaxed">{descricao}</p>
+      <p className="text-xs text-[#8b949e] mb-5 leading-relaxed">{descricao}</p>
 
       <div className="space-y-3">
         <div>
           <div className="flex justify-between mb-1">
-            <span className="text-[11px] text-[#5E7B6E]">Vazamento atual</span>
-            <span className="text-sm font-bold text-[#E05C6E]">
+            <span className="text-[11px] text-[#6e7681]">Vazamento atual</span>
+            <span className="text-sm font-bold font-mono text-[#da3633]">
               <AnimatedNumber value={valorPerda} prefix="R$ " delay={delay + 300} />
             </span>
           </div>
           <div className="h-1.5 bg-[#26382F] rounded-full overflow-hidden">
             <div
-              className="h-full bg-[#E05C6E]/80 rounded-full transition-all duration-1000 ease-out"
+              className="h-full bg-[#da3633]/80 rounded-full transition-all duration-1000 ease-out"
               style={{ width: barsReady ? `${barPerda}%` : '0%', transitionDelay: '200ms' }}
             />
           </div>
@@ -72,8 +72,8 @@ function VazamentoCard({ titulo, valorPerda, valorEconomia, descricao, delay = 0
 
         <div>
           <div className="flex justify-between mb-1">
-            <span className="text-[11px] text-[#5E7B6E]">Otimizado</span>
-            <span className="text-sm font-bold text-[#C9A86A]">
+            <span className="text-[11px] text-[#6e7681]">Otimizado</span>
+            <span className="text-sm font-bold font-mono text-[#C9A86A]">
               <AnimatedNumber value={valorEconomia} prefix="R$ " delay={delay + 600} />
             </span>
           </div>
@@ -96,7 +96,7 @@ export default function Step3({ resultados, onNext }) {
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/80 mb-3 font-semibold animate-pulse-subtle">
           Entenda os custos &mdash; Alerta de vazamento
         </p>
-        <h1 className="text-xl md:text-[26px] font-bold text-[#E2E8F0] leading-tight mb-2">
+        <h1 className="text-xl md:text-[26px] font-bold text-[#f0f6fc] leading-tight mb-2">
           Entre custos de inventario, impostos e juros,{' '}
           <span className="text-[#C9A86A]">
             <AnimatedNumber value={resultados.total.economia5Anos} prefix="R$ " />
@@ -104,7 +104,7 @@ export default function Step3({ resultados, onNext }) {
           <br />
           podem estar em risco nos proximos 5 anos
         </h1>
-        <p className="text-xs text-[#5E7B6E] mt-2">
+        <p className="text-xs text-[#6e7681] mt-2">
           Organizacao e planejamento patrimonial — analise baseada no perfil informado
         </p>
       </div>
@@ -139,19 +139,19 @@ export default function Step3({ resultados, onNext }) {
 
       {/* Card Grande - destaque dourado */}
       <div
-        className="animate-fade-in-up opacity-0 mt-8 rounded-2xl p-6 md:p-8 text-center bg-[#1B4235] border border-[#C9A86A]/40 shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
+        className="animate-fade-in-up opacity-0 mt-8 rounded-2xl p-6 md:p-8 text-center bg-[#21262d] border border-[#C9A86A]/40 shadow-[0_4px_24px_rgba(0,0,0,0.3)]"
         style={{ animationDelay: '1200ms', animationFillMode: 'forwards' }}
       >
-        <p className="text-[10px] tracking-[0.2em] uppercase text-[#8AA59A] mb-2 font-semibold">
+        <p className="text-[10px] tracking-[0.2em] uppercase text-[#8b949e] mb-2 font-semibold">
           Potencial total de economia em 5 anos
         </p>
-        <p className="text-3xl md:text-4xl font-bold text-[#C9A86A] mb-4">
+        <p className="text-3xl md:text-4xl font-bold font-mono text-[#C9A86A] mb-4">
           <AnimatedNumber value={resultados.total.economia5Anos} prefix="R$ " delay={1400} />
         </p>
         <div className="h-px bg-[#C9A86A]/20 my-3" />
-        <p className="text-sm text-[#8AA59A]">
+        <p className="text-sm text-[#8b949e]">
           Seu tempo para aposentadoria: de{' '}
-          <span className="font-bold text-[#E2E8F0]">{resultados.total.anosAtuais} anos</span>{' '}
+          <span className="font-bold text-[#f0f6fc]">{resultados.total.anosAtuais} anos</span>{' '}
           para{' '}
           <span className="font-bold text-[#C9A86A]">{resultados.total.anosReduzido} anos</span>
         </p>
