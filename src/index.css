@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #00A651;
+  --color-bg: #0F3328;
   --color-card: #FFFFFF;
   --color-card-hover: #F8FAF9;
   --color-border: #E0EDE4;
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  background-color: #00A651;
+  background-color: #0F3328;
   color: #1A2E23;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;

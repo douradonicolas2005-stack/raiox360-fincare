@@ -71,9 +71,9 @@ export default function App() {
   const steps = ['Diagnostico', 'Contato', 'Resultado', 'Mapa'];
 
   return (
-    <div className="min-h-screen bg-[#00A651]">
+    <div className="min-h-screen bg-[#0F3328]">
       {/* Progress Bar */}
-      <div className="sticky top-0 z-50 bg-[#00A651]/95 backdrop-blur-md border-b border-white/15">
+      <div className="sticky top-0 z-50 bg-[#0F3328]/95 backdrop-blur-md border-b border-white/15">
         <div className="max-w-2xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-2">

@@ -12,6 +12,7 @@ export function gerarPDF(resultados, formData, leadData) {
   const GREEN = [0, 166, 81];
   const GOLD = [184, 134, 11];
   const RED = [220, 53, 69];
+  const BG = [15, 51, 40];
   const DARK_BG = [13, 25, 15];
   const CARD_BG = [255, 255, 255];
   const BORDER = [220, 230, 222];
@@ -19,7 +20,7 @@ export function gerarPDF(resultados, formData, leadData) {
   const TEXT_MUTED = [90, 122, 104];
 
   function drawBackground() {
-    doc.setFillColor(...GREEN);
+    doc.setFillColor(...BG);
     doc.rect(0, 0, pageW, pageH, 'F');
   }
 
@@ -140,7 +141,7 @@ export function gerarPDF(resultados, formData, leadData) {
   y += 30;
 
   // Footer
-  doc.setFillColor(...GREEN);
+  doc.setFillColor(...BG);
   doc.rect(0, pageH - 16, pageW, 16, 'F');
   drawText('CONFIDENCIAL | Fincare Servicos Financeiros Ltda. | CNPJ 00.000.000/0001-00', pageW / 2, pageH - 6, { size: 6, color: [255, 255, 255], align: 'center' });
   drawText('Mapa patrimonial gerado por IA + validado por especialistas | Contato: contato@fincare.com.br', pageW / 2, pageH - 11, { size: 5, color: [200, 230, 210], align: 'center' });
@@ -212,7 +213,7 @@ export function gerarPDF(resultados, formData, leadData) {
   }
 
   // Footer
-  doc.setFillColor(...GREEN);
+  doc.setFillColor(...BG);
   doc.rect(0, pageH - 12, pageW, 12, 'F');
   drawText('Fincare Engenharia Patrimonial | Contato: contato@fincare.com.br | CNPJ 00.000.000/0001-00', pageW / 2, pageH - 5, { size: 6, color: [255, 255, 255], align: 'center' });
 
@@ -273,7 +274,7 @@ export function gerarPDF(resultados, formData, leadData) {
   });
 
   // Footer
-  doc.setFillColor(...GREEN);
+  doc.setFillColor(...BG);
   doc.rect(0, pageH - 12, pageW, 12, 'F');
   drawText('Fincare Engenharia Patrimonial | Contato: contato@fincare.com.br | CNPJ 00.000.000/0001-00', pageW / 2, pageH - 5, { size: 6, color: [255, 255, 255], align: 'center' });
 
