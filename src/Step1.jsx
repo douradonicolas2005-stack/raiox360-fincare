@@ -25,17 +25,45 @@ export default function Step1({ data, onChange, onNext }) {
 
   return (
     <div className="animate-fade-in-up">
-      <div className="text-center mb-8">
+      <div className="text-center mb-6">
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
           Fincare &mdash; Engenharia Patrimonial
         </p>
         <h1 className="text-2xl md:text-[30px] font-bold text-[#E2E8F0] leading-tight mb-3">
-          Raio-X Patrimonial do seu Patrimonio
+          Organize os bens. Entenda os custos. Planeje sua renda.
         </h1>
         <p className="text-sm text-[#8AA59A] max-w-md mx-auto">
-          Descubra em 3 minutos quanto esta vazando em imposto, inventario e juros
+          Descubra em 3 minutos o que levar em conta em imoveis, investimentos e impostos antes de qualquer decisao
         </p>
-        <p className="text-[10px] text-[#5E7B6E] mt-3 tracking-wide">
+      </div>
+
+      {/* 3 pilares de valor */}
+      <div className="grid grid-cols-1 gap-2 mb-6">
+        <div className="bg-[#16382D] rounded-xl px-4 py-3 border border-[#1F4A3A] flex items-center gap-3">
+          <span className="w-6 h-6 rounded-full bg-[#C9A86A]/15 text-[#C9A86A] text-[11px] font-bold flex items-center justify-center shrink-0">1</span>
+          <div>
+            <p className="text-xs font-semibold text-[#E2E8F0]">Organize os bens</p>
+            <p className="text-[11px] text-[#8AA59A]">Mapeie imoveis, investimentos e participacoes</p>
+          </div>
+        </div>
+        <div className="bg-[#16382D] rounded-xl px-4 py-3 border border-[#1F4A3A] flex items-center gap-3">
+          <span className="w-6 h-6 rounded-full bg-[#C9A86A]/15 text-[#C9A86A] text-[11px] font-bold flex items-center justify-center shrink-0">2</span>
+          <div>
+            <p className="text-xs font-semibold text-[#E2E8F0]">Entenda os custos</p>
+            <p className="text-[11px] text-[#8AA59A]">Inventario, impostos e juros que corroem o patrimonio</p>
+          </div>
+        </div>
+        <div className="bg-[#16382D] rounded-xl px-4 py-3 border border-[#1F4A3A] flex items-center gap-3">
+          <span className="w-6 h-6 rounded-full bg-[#C9A86A]/15 text-[#C9A86A] text-[11px] font-bold flex items-center justify-center shrink-0">3</span>
+          <div>
+            <p className="text-xs font-semibold text-[#E2E8F0]">Planeje sua renda</p>
+            <p className="text-[11px] text-[#8AA59A]">Estrategias para gerar renda do seu patrimonio</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="text-center mb-6">
+        <p className="text-[10px] text-[#5E7B6E] tracking-wide">
           Analise calibrada para patrimonios acima de R$ 500k &mdash; Dados 100% confidenciais
         </p>
       </div>

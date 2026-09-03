@@ -50,10 +50,10 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
     <div className="animate-fade-in-up">
       <div className="text-center mb-8">
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
-          Mapa de Engenharia Patrimonial
+          Planeje sua renda &mdash; Mapa de Engenharia
         </p>
         <h1 className="text-2xl md:text-[28px] font-bold text-[#E2E8F0] leading-tight">
-          Seu Mapa em 3 Camadas
+          Seu proximo passo, em 3 camadas
         </h1>
         <p className="text-xs text-[#5E7B6E] mt-2">
           Personalizado para o perfil de {leadData.nome?.split(' ')[0]}
@@ -137,7 +137,7 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
         className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 mb-6 text-center border border-[#C9A86A]/30 shadow-[0_2px_16px_rgba(0,0,0,0.3)]"
         style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
       >
-        <p className="text-[10px] text-[#5E7B6E] mb-1 uppercase tracking-wider">Economia potencial em 5 anos</p>
+        <p className="text-[10px] text-[#5E7B6E] mb-1 uppercase tracking-wider">Potencial de renda e economia em 5 anos</p>
         <p className="text-2xl font-bold text-[#C9A86A]">{formatarMoedaCompleto(resultados.total.economia5Anos)}</p>
       </div>
 

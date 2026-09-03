@@ -94,17 +94,18 @@ export default function Step3({ resultados, onNext }) {
     <div className="animate-fade-in-up">
       <div className="text-center mb-8">
         <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/80 mb-3 font-semibold animate-pulse-subtle">
-          Alerta de vazamento patrimonial
+          Entenda os custos &mdash; Alerta de vazamento
         </p>
         <h1 className="text-xl md:text-[26px] font-bold text-[#E2E8F0] leading-tight mb-2">
-          Encontramos{' '}
+          Entre custos de inventario, impostos e juros,{' '}
           <span className="text-[#C9A86A]">
             <AnimatedNumber value={resultados.total.economia5Anos} prefix="R$ " />
-          </span>{' '}
-          de vazamento nos proximos 5 anos
+          </span>
+          <br />
+          podem estar em risco nos proximos 5 anos
         </h1>
         <p className="text-xs text-[#5E7B6E] mt-2">
-          Analise baseada no perfil informado &mdash; Fincare Engenharia Patrimonial
+          Organizacao e planejamento patrimonial — analise baseada no perfil informado
         </p>
       </div>
 
@@ -161,7 +162,7 @@ export default function Step3({ resultados, onNext }) {
           onClick={onNext}
           className="w-full py-4 rounded-2xl text-base font-semibold tracking-wide bg-[#C9A86A] text-[#0C2017] hover:bg-[#D9BB82] shadow-[0_4px_20px_rgba(201,168,106,0.25)] transition-all duration-300"
         >
-          Ver meu Mapa de Engenharia
+          Ver meu Mapa e planejar minha renda
           <svg className="inline-block ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>

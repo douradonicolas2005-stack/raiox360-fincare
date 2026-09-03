@@ -88,10 +88,10 @@ export default function Step2({ data, onChange, onNext }) {
           Fincare &mdash; Engenharia Patrimonial
         </p>
         <h1 className="text-2xl md:text-[28px] font-bold text-[#E2E8F0] leading-tight mb-3">
-          Quase la. Precisamos dos seus dados
+          Sua heranca. Seu proximo passo.
         </h1>
         <p className="text-sm text-[#8AA59A] max-w-md mx-auto leading-relaxed">
-          Seu Raio-X Patrimonial sera gerado de forma <span className="font-semibold text-[#E2E8F0]">100% confidencial</span>. Precisamos apenas para enviar o relatorio e agendar sua analise.
+          Precisamos dos seus dados para montar o seu Raio-X completo e agendar sua analise patrimonial confidencial.
         </p>
       </div>
 
