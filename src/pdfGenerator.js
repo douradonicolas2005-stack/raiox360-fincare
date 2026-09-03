@@ -6,13 +6,14 @@ export function gerarPDF(resultados, formData, leadData) {
   const pageW = doc.internal.pageSize.getWidth();
   const pageH = doc.internal.pageSize.getHeight();
 
-  const bg = [6, 6, 6];
-  const card = [17, 17, 17];
+  const bg = [11, 17, 32];
+  const card = [19, 29, 48];
+  const green = [0, 166, 81];
   const gold = [201, 168, 106];
-  const textLight = [232, 228, 221];
-  const textMuted = [138, 133, 126];
-  const green = [46, 90, 76];
-  const border = [30, 30, 30];
+  const textLight = [226, 232, 240];
+  const textMuted = [122, 139, 166];
+  const red = [220, 53, 69];
+  const border = [28, 40, 64];
 
   function drawBackground() {
     doc.setFillColor(...bg);
@@ -26,8 +27,8 @@ export function gerarPDF(resultados, formData, leadData) {
     doc.roundedRect(x, y, w, h, 2, 2, 'S');
   }
 
-  function drawGoldLine(y) {
-    doc.setDrawColor(...gold);
+  function drawLine(y, color) {
+    doc.setDrawColor(...(color || green));
     doc.setLineWidth(0.3);
     doc.line(20, y, pageW - 20, y);
   }
@@ -39,7 +40,7 @@ export function gerarPDF(resultados, formData, leadData) {
   // Header - Fincare
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9);
-  doc.setTextColor(...gold);
+  doc.setTextColor(...green);
   doc.text('FINCARE', 20, y);
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(7);
@@ -48,11 +49,11 @@ export function gerarPDF(resultados, formData, leadData) {
 
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(16);
-  doc.setTextColor(...gold);
+  doc.setTextColor(...green);
   doc.text('RAIO-X PATRIMONIAL', pageW / 2, y + 2, { align: 'center' });
 
   y += 14;
-  drawGoldLine(y);
+  drawLine(y);
   y += 8;
 
   // Date + Client
@@ -63,10 +64,10 @@ export function gerarPDF(resultados, formData, leadData) {
   doc.text(`Gerado em ${dataGeracao} | ${leadData.nome || 'Confidencial'} | Relatorio Confidencial`, 20, y);
   y += 8;
 
-  // Patrimônio
+  // Patrimonio
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(10);
-  doc.setTextColor(...gold);
+  doc.setTextColor(...green);
   doc.text('PATRIMONIO ANALISADO', 20, y);
   y += 7;
 
@@ -150,15 +151,15 @@ export function gerarPDF(resultados, formData, leadData) {
   }
 
   // TOTAL
-  drawGoldLine(y);
+  drawLine(y, green);
   y += 8;
 
-  doc.setFillColor(...gold);
+  doc.setFillColor(...green);
   doc.roundedRect(20, y, pageW - 40, 24, 2, 2, 'F');
   y += 8;
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(9);
-  doc.setTextColor(6, 6, 6);
+  doc.setTextColor(11, 17, 32);
   doc.text('POTENCIAL TOTAL DE ECONOMIA EM 5 ANOS', pageW / 2, y, { align: 'center' });
   y += 8;
   doc.setFontSize(14);
@@ -168,7 +169,7 @@ export function gerarPDF(resultados, formData, leadData) {
   // MAPA DE ENGENHARIA
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(11);
-  doc.setTextColor(...gold);
+  doc.setTextColor(...green);
   doc.text('MAPA DE ENGENHARIA PATRIMONIAL', 20, y);
   y += 8;
 
@@ -193,11 +194,11 @@ export function gerarPDF(resultados, formData, leadData) {
 
   cols.forEach(col => {
     drawCard(col.x, y, colW, 50);
-    doc.setFillColor(...gold);
+    doc.setFillColor(...green);
     doc.rect(col.x, y, colW, 0.8, 'F');
     doc.setFont('helvetica', 'bold');
     doc.setFontSize(6.5);
-    doc.setTextColor(...gold);
+    doc.setTextColor(...green);
     doc.text(col.titulo, col.x + colW / 2, y + 7, { align: 'center' });
 
     doc.setFont('helvetica', 'normal');

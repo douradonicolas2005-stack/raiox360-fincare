@@ -1,17 +1,19 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #060606;
-  --color-card: #111111;
-  --color-card-hover: #161616;
-  --color-border: #1E1E1E;
-  --color-border-focus: #333333;
-  --color-text: #E8E4DD;
-  --color-text-muted: #8A857E;
+  --color-bg: #0B1120;
+  --color-card: #131D30;
+  --color-card-hover: #182438;
+  --color-border: #1C2840;
+  --color-border-focus: #2A3A54;
+  --color-text: #E2E8F0;
+  --color-text-muted: #7A8BA6;
+  --color-primary: #00A651;
+  --color-primary-hover: #00C060;
   --color-gold: #C9A86A;
   --color-gold-dim: #A68B52;
-  --color-loss: #8B2E2E;
-  --color-gain: #2E5A4C;
+  --color-loss: #DC3545;
+  --color-gain: #00A651;
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -20,8 +22,8 @@ html {
 }
 
 body {
-  background-color: #060606;
-  color: #E8E4DD;
+  background-color: #0B1120;
+  color: #E2E8F0;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -69,7 +71,7 @@ input[type="range"] {
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background: #1E1E1E;
+  background: #1C2840;
   outline: none;
 }
 
@@ -79,25 +81,25 @@ input[type="range"]::-webkit-slider-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #C9A86A;
+  background: #00A651;
   cursor: pointer;
-  border: 2px solid #060606;
-  box-shadow: 0 0 10px rgba(201, 168, 106, 0.25);
+  border: 2px solid #0B1120;
+  box-shadow: 0 0 10px rgba(0, 166, 81, 0.3);
   transition: box-shadow 0.2s;
 }
 
 input[type="range"]::-webkit-slider-thumb:hover {
-  box-shadow: 0 0 16px rgba(201, 168, 106, 0.4);
+  box-shadow: 0 0 16px rgba(0, 166, 81, 0.5);
 }
 
 input[type="range"]::-moz-range-thumb {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: #C9A86A;
+  background: #00A651;
   cursor: pointer;
-  border: 2px solid #060606;
-  box-shadow: 0 0 10px rgba(201, 168, 106, 0.25);
+  border: 2px solid #0B1120;
+  box-shadow: 0 0 10px rgba(0, 166, 81, 0.3);
 }
 
 input[type="text"],
@@ -107,6 +109,6 @@ input[type="email"] {
 }
 
 input::placeholder {
-  color: #8A857E;
+  color: #7A8BA6;
   opacity: 0.5;
 }
