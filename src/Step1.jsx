@@ -26,26 +26,26 @@ export default function Step1({ data, onChange, onNext }) {
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-8">
-        <p className="text-[10px] tracking-[0.25em] uppercase text-white/50 mb-3 font-semibold">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
           Fincare &mdash; Engenharia Patrimonial
         </p>
-        <h1 className="text-2xl md:text-[30px] font-bold text-white leading-tight mb-3">
+        <h1 className="text-2xl md:text-[30px] font-bold text-[#E2E8F0] leading-tight mb-3">
           Raio-X Patrimonial do seu Patrimonio
         </h1>
-        <p className="text-sm text-white/60 max-w-md mx-auto">
+        <p className="text-sm text-[#8AA59A] max-w-md mx-auto">
           Descubra em 3 minutos quanto esta vazando em imposto, inventario e juros
         </p>
-        <p className="text-[10px] text-white/35 mt-3 tracking-wide">
+        <p className="text-[10px] text-[#5E7B6E] mt-3 tracking-wide">
           Analise calibrada para patrimonios acima de R$ 500k &mdash; Dados 100% confidenciais
         </p>
       </div>
 
       <div className="space-y-4">
         {/* Patrimonio Total */}
-        <div className="bg-white rounded-2xl p-5 md:p-6 shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
+        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
           <div className="flex justify-between items-center mb-4">
-            <label className="text-sm font-medium text-[#1A2E23]/70">Patrimonio total estimado</label>
-            <span className="text-lg font-bold text-[#00A651]">{formatCurrency(data.patrimonio)}</span>
+            <label className="text-sm font-medium text-[#8AA59A]">Patrimonio total estimado</label>
+            <span className="text-lg font-bold text-[#C9A86A]">{formatCurrency(data.patrimonio)}</span>
           </div>
           <input
             type="range"
@@ -57,21 +57,21 @@ export default function Step1({ data, onChange, onNext }) {
             className="w-full"
           />
           <div className="flex justify-between mt-2">
-            <span className="text-[10px] text-[#1A2E23]/30">R$ 500k</span>
-            <span className="text-[10px] text-[#1A2E23]/30">R$ 10M+</span>
+            <span className="text-[10px] text-[#5E7B6E]">R$ 500k</span>
+            <span className="text-[10px] text-[#5E7B6E]">R$ 10M+</span>
           </div>
         </div>
 
         {/* Divisao */}
-        <div className="bg-white rounded-2xl p-5 md:p-6 shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
+        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
           <div className="flex justify-between items-center mb-1">
-            <label className="text-sm font-medium text-[#1A2E23]/70">Divisao atual</label>
-            <span className={`text-sm font-bold ${totalDivisao === 100 ? 'text-[#00A651]' : 'text-[#DC3545]'}`}>
+            <label className="text-sm font-medium text-[#8AA59A]">Divisao atual</label>
+            <span className={`text-sm font-bold ${totalDivisao === 100 ? 'text-[#C9A86A]' : 'text-[#E05C6E]'}`}>
               {totalDivisao}%
             </span>
           </div>
           {totalDivisao !== 100 && (
-            <p className="text-[11px] text-[#DC3545]/70 mb-3">Os sliders devem somar 100%</p>
+            <p className="text-[11px] text-[#E05C6E]/70 mb-3">Os sliders devem somar 100%</p>
           )}
 
           <div className="space-y-5 mt-4">
@@ -83,8 +83,8 @@ export default function Step1({ data, onChange, onNext }) {
             ].map(({ key, label }) => (
               <div key={key}>
                 <div className="flex justify-between mb-2">
-                  <span className="text-xs text-[#1A2E23]/55">{label}</span>
-                  <span className="text-sm font-semibold text-[#B8860B]">{data.divisao[key]}%</span>
+                  <span className="text-xs text-[#8AA59A]">{label}</span>
+                  <span className="text-sm font-semibold text-[#C9A86A]">{data.divisao[key]}%</span>
                 </div>
                 <input
                   type="range"
@@ -100,17 +100,17 @@ export default function Step1({ data, onChange, onNext }) {
           </div>
 
           {/* Barra visual */}
-          <div className="flex h-1.5 rounded-full overflow-hidden mt-4 bg-[#E8F5EC]">
-            <div className="bg-[#00A651]/60 transition-all duration-300" style={{ width: `${data.divisao.imoveis}%` }} />
-            <div className="bg-[#00A651]/40 transition-all duration-300" style={{ width: `${data.divisao.banco}%` }} />
-            <div className="bg-[#B8860B]/40 transition-all duration-300" style={{ width: `${data.divisao.investimentos}%` }} />
-            <div className="bg-[#B8860B]/20 transition-all duration-300" style={{ width: `${data.divisao.empresa}%` }} />
+          <div className="flex h-1.5 rounded-full overflow-hidden mt-4 bg-[#1F4A3A]">
+            <div className="bg-[#C9A86A]/70 transition-all duration-300" style={{ width: `${data.divisao.imoveis}%` }} />
+            <div className="bg-[#00A651]/60 transition-all duration-300" style={{ width: `${data.divisao.banco}%` }} />
+            <div className="bg-[#C9A86A]/40 transition-all duration-300" style={{ width: `${data.divisao.investimentos}%` }} />
+            <div className="bg-[#00A651]/30 transition-all duration-300" style={{ width: `${data.divisao.empresa}%` }} />
           </div>
         </div>
 
         {/* Estrutura Atual */}
-        <div className="bg-white rounded-2xl p-5 md:p-6 shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
-          <label className="text-sm font-medium text-[#1A2E23]/70 block mb-3">Estrutura atual</label>
+        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+          <label className="text-sm font-medium text-[#8AA59A] block mb-3">Estrutura atual</label>
           <div className="space-y-2">
             {['Tudo na PF', 'Parte em PJ', 'Tenho Holding'].map((opt) => (
               <button
@@ -118,8 +118,8 @@ export default function Step1({ data, onChange, onNext }) {
                 onClick={() => handleSelect('estrutura', opt)}
                 className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${
                   data.estrutura === opt
-                    ? 'border-[#00A651] bg-[#00A651]/5 text-[#00A651] font-medium'
-                    : 'border-[#E0EDE4] bg-[#F8FAF9] text-[#1A2E23]/55 hover:border-[#00A651]/30 hover:bg-white'
+                    ? 'border-[#C9A86A] bg-[#C9A86A]/10 text-[#C9A86A] font-medium'
+                    : 'border-[#1F4A3A] bg-[#122E25] text-[#8AA59A] hover:border-[#C9A86A]/30 hover:bg-[#16382D]'
                 }`}
               >
                 {opt}
@@ -129,8 +129,8 @@ export default function Step1({ data, onChange, onNext }) {
         </div>
 
         {/* Maior Dor */}
-        <div className="bg-white rounded-2xl p-5 md:p-6 shadow-[0_2px_16px_rgba(0,0,0,0.08)]">
-          <label className="text-sm font-medium text-[#1A2E23]/70 block mb-3">Maior dor hoje</label>
+        <div className="bg-[#16382D] rounded-2xl p-5 md:p-6 border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]">
+          <label className="text-sm font-medium text-[#8AA59A] block mb-3">Maior dor hoje</label>
           <div className="space-y-2">
             {[
               'Pagar menos imposto',
@@ -143,8 +143,8 @@ export default function Step1({ data, onChange, onNext }) {
                 onClick={() => handleSelect('maiorDor', opt)}
                 className={`w-full text-left px-4 py-3 rounded-xl border text-sm transition-all duration-200 ${
                   data.maiorDor === opt
-                    ? 'border-[#00A651] bg-[#00A651]/5 text-[#00A651] font-medium'
-                    : 'border-[#E0EDE4] bg-[#F8FAF9] text-[#1A2E23]/55 hover:border-[#00A651]/30 hover:bg-white'
+                    ? 'border-[#C9A86A] bg-[#C9A86A]/10 text-[#C9A86A] font-medium'
+                    : 'border-[#1F4A3A] bg-[#122E25] text-[#8AA59A] hover:border-[#C9A86A]/30 hover:bg-[#16382D]'
                 }`}
               >
                 {opt}
@@ -161,8 +161,8 @@ export default function Step1({ data, onChange, onNext }) {
           disabled={!isValid}
           className={`w-full py-4 rounded-2xl text-base font-semibold tracking-wide transition-all duration-300 ${
             isValid
-              ? 'bg-white text-[#00A651] hover:bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.12)]'
-              : 'bg-white/30 text-white/50 cursor-not-allowed'
+              ? 'bg-[#C9A86A] text-[#0C2017] hover:bg-[#D9BB82] shadow-[0_4px_20px_rgba(201,168,106,0.25)]'
+              : 'bg-[#2A5445]/50 text-[#5E7B6E] cursor-not-allowed'
           }`}
         >
           Continuar
@@ -171,7 +171,7 @@ export default function Step1({ data, onChange, onNext }) {
           </svg>
         </button>
         {!isValid && totalDivisao !== 100 && (
-          <p className="text-[10px] text-center text-white/30 mt-2">
+          <p className="text-[10px] text-center text-[#5E7B6E] mt-2">
             Ajuste os sliders para somar 100%
           </p>
         )}

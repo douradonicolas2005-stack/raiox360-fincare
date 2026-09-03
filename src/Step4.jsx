@@ -49,13 +49,13 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
   return (
     <div className="animate-fade-in-up">
       <div className="text-center mb-8">
-        <p className="text-[10px] tracking-[0.25em] uppercase text-white/50 mb-3 font-semibold">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-[#C9A86A]/70 mb-3 font-semibold">
           Mapa de Engenharia Patrimonial
         </p>
-        <h1 className="text-2xl md:text-[28px] font-bold text-white leading-tight">
+        <h1 className="text-2xl md:text-[28px] font-bold text-[#E2E8F0] leading-tight">
           Seu Mapa em 3 Camadas
         </h1>
-        <p className="text-xs text-white/45 mt-2">
+        <p className="text-xs text-[#5E7B6E] mt-2">
           Personalizado para o perfil de {leadData.nome?.split(' ')[0]}
         </p>
       </div>
@@ -63,69 +63,69 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
       {/* 3 Colunas */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
         {/* Protecao */}
-        <div className="animate-fade-in-up opacity-0 bg-white rounded-2xl p-5 relative overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.08)]" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00A651]" />
-          <div className="flex items-center gap-2 mb-4 text-[#00A651]">
+        <div className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 relative overflow-hidden border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]" style={{ animationDelay: '100ms', animationFillMode: 'forwards' }}>
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A86A]" />
+          <div className="flex items-center gap-2 mb-4 text-[#C9A86A]">
             <ShieldIcon />
             <span className="text-xs font-semibold tracking-[0.1em] uppercase">Protecao</span>
           </div>
           <ul className="space-y-3">
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/60 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/70 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
               Migrar imoveis da PF para Holding para zerar ITCMD na sucessao
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/60 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/70 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
               Trocar previdencia do bancao por PGBL/VGBL com taxa 0,5% e sucessao direta
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/60 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/70 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
               Criar seguro de vida resgatavel para liquidez do inventario
             </li>
           </ul>
         </div>
 
         {/* Eficiencia */}
-        <div className="animate-fade-in-up opacity-0 bg-white rounded-2xl p-5 relative overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.08)]" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#B8860B]" />
-          <div className="flex items-center gap-2 mb-4 text-[#B8860B]">
+        <div className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 relative overflow-hidden border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]" style={{ animationDelay: '300ms', animationFillMode: 'forwards' }}>
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00A651]" />
+          <div className="flex items-center gap-2 mb-4 text-[#00A651]">
             <ChartIcon />
             <span className="text-xs font-semibold tracking-[0.1em] uppercase">Eficiencia</span>
           </div>
           <ul className="space-y-3">
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#B8860B]/70 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#00A651]/80 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
               Migrar {formatarMoedaCompleto(resultados.imposto.valorBanco)} de CDB 92% CDI para FII de papel + LCI 95% CDI isento
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#B8860B]/70 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#00A651]/80 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
               Ganho liquido estimado: {formatarMoedaCompleto(resultados.imposto.economiaAno)}/ano
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#B8860B]/70 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#00A651]/80 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
               Utilizar FGTS de R$ 45k como lance em consorcio imobiliario
             </li>
           </ul>
         </div>
 
         {/* Alavancagem */}
-        <div className="animate-fade-in-up opacity-0 bg-white rounded-2xl p-5 relative overflow-hidden shadow-[0_2px_16px_rgba(0,0,0,0.08)]" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
-          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#00A651]/60" />
-          <div className="flex items-center gap-2 mb-4 text-[#00A651]/70">
+        <div className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 relative overflow-hidden border border-[#1F4A3A] shadow-[0_2px_16px_rgba(0,0,0,0.3)]" style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}>
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-[#C9A86A]/70" />
+          <div className="flex items-center gap-2 mb-4 text-[#C9A86A]/80">
             <BuildingIcon />
             <span className="text-xs font-semibold tracking-[0.1em] uppercase">Alavancagem</span>
           </div>
           <ul className="space-y-3">
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/50 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/60 mt-0.5 shrink-0 font-mono text-[10px]">01</span>
               Usar R$ 150k de caixa para 2 cartas contempladas de R$ 400k
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/50 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/60 mt-0.5 shrink-0 font-mono text-[10px]">02</span>
               Estrategia: Aluguel das cartas paga 80% das parcelas
             </li>
-            <li className="flex gap-2 text-[11px] text-[#1A2E23]/55 leading-relaxed">
-              <span className="text-[#00A651]/50 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
+            <li className="flex gap-2 text-[11px] text-[#8AA59A] leading-relaxed">
+              <span className="text-[#C9A86A]/60 mt-0.5 shrink-0 font-mono text-[10px]">03</span>
               Patrimonio final projetado: R$ 800k com R$ 150k de entrada
             </li>
           </ul>
@@ -134,11 +134,11 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
 
       {/* Resumo */}
       <div
-        className="animate-fade-in-up opacity-0 bg-white rounded-2xl p-5 mb-6 text-center shadow-[0_2px_16px_rgba(0,0,0,0.08)]"
+        className="animate-fade-in-up opacity-0 bg-[#16382D] rounded-2xl p-5 mb-6 text-center border border-[#C9A86A]/30 shadow-[0_2px_16px_rgba(0,0,0,0.3)]"
         style={{ animationDelay: '700ms', animationFillMode: 'forwards' }}
       >
-        <p className="text-[10px] text-[#1A2E23]/35 mb-1 uppercase tracking-wider">Economia potencial em 5 anos</p>
-        <p className="text-2xl font-bold text-[#00A651]">{formatarMoedaCompleto(resultados.total.economia5Anos)}</p>
+        <p className="text-[10px] text-[#5E7B6E] mb-1 uppercase tracking-wider">Economia potencial em 5 anos</p>
+        <p className="text-2xl font-bold text-[#C9A86A]">{formatarMoedaCompleto(resultados.total.economia5Anos)}</p>
       </div>
 
       {/* Download */}
@@ -148,10 +148,10 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
           disabled={gerando}
           className={`w-full py-4 rounded-2xl text-base font-semibold tracking-wide transition-all duration-300 flex items-center justify-center gap-2 ${
             gerando
-              ? 'bg-white/50 text-[#1A2E23]/40 cursor-wait'
+              ? 'bg-[#2A5445]/50 text-[#5E7B6E] cursor-wait'
               : pdfGerado
-                ? 'bg-[#1A2E23] text-white'
-                : 'bg-white text-[#00A651] hover:bg-white/95 shadow-[0_4px_20px_rgba(0,0,0,0.12)]'
+                ? 'bg-[#00A651] text-[#0C2017]'
+                : 'bg-[#C9A86A] text-[#0C2017] hover:bg-[#D9BB82] shadow-[0_4px_20px_rgba(201,168,106,0.25)]'
           }`}
         >
           {gerando ? (
@@ -178,7 +178,7 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
         </button>
 
         {pdfGerado && (
-          <p className="text-[11px] text-white/40 text-center mt-3">
+          <p className="text-[11px] text-[#5E7B6E] text-center mt-3">
             Seu relatorio confidencial foi gerado. Nossa equipe entrara em contato em ate 2h.
           </p>
         )}
@@ -187,7 +187,7 @@ export default function Step4({ resultados, formData, leadData, onRestart }) {
       <div className="mt-8 text-center">
         <button
           onClick={onRestart}
-          className="text-[11px] text-white/30 hover:text-white/60 transition-colors"
+          className="text-[11px] text-[#5E7B6E] hover:text-[#8AA59A] transition-colors"
         >
           Nova simulacao
         </button>
